@@ -6,7 +6,7 @@ RSpec.configure do |config|
   config.include OmniAuthHelpers, type: :feature
 end
 
-feature "User signs up for HumpDays", js: true do
+feature "User signs up for todoy", js: true do
   # As a user, I want to be able to sign up using my email,
   # so that sign up is disconnected from other social accounts.
 
