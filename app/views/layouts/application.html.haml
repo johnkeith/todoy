@@ -10,9 +10,5 @@
   %body
     = render 'bootstrap/navbar'
     .container
-      .row
-      - if notice  
-        %p.notice= notice
-      - if alert
-        %p.alert= alert
+      = render 'custom_devise/alerts'
       = yield

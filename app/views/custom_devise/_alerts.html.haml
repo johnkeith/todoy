@@ -1,0 +1,15 @@
+.row
+  - if notice  
+    .notice.alert.alert-success
+      = notice
+      .pull-right
+        %button.dismiss-notice{ type: "button" }
+          %span.glyphicon.glyphicon-remove
+          %span.sr-only Close
+  - if alert
+    .alert.alert-danger
+      = alert
+      .pull-right
+        %button.dismiss-notice{ type: "button" }
+          %span.glyphicon.glyphicon-remove
+          %span.sr-only Close

@@ -3,5 +3,14 @@
 body {
   margin-top:60px;
 }
+.dismiss-notice {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  font-size:1.1em;
+}
 
 // bootstrap customizations
+
