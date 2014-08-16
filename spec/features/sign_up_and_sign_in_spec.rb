@@ -47,12 +47,32 @@ feature "User signs up for todoy using email", js: true do
     fill_in "Email", with: "test@example.com"
     fill_in "Password", with: "password1234"
     click_button "Sign up"
-    faliure_notification "prohibited this user from being saved"
+    expect(page).to have_css '#error_explanation'
+    expect(page).to have_content "prohibited this user from being saved"
   end
 end
 
 feature "User signs in to todoy using email", js: true do
   background do
     click_sign_in
+  end
+
+  scenario "successful sign in using email" do
+    user = FactoryGirl.create(:user)
+    click_link "Using Email"
+    fill_in "Email", with: user.email
+    fill_in "Password", with: user.password
+    click_button "Sign in"
+    success_notification "Signed in successfully."
+  end
+
+  scenario "failed sign in using email" do
+    user = FactoryGirl.create(:user)
+    click_link "Using Email"
+    fill_in "Email", with: user.email
+    fill_in "Password", with: "notthepassword"
+    click_button "Sign in"
+    expect(page).to have_css ".alert"
+    expect(page).to have_content "Invalid email or password"
   end
 end

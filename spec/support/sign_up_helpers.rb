@@ -12,10 +12,4 @@ module SignUpHelpers
   def success_notification(text)
     expect(page).to have_css '.notice', text: text
   end
-
-  def faliure_notification(text)
-    expect(page).to have_content text
-    expect(page).to have_css '#error_explanation'
-    expect(page).not_to have_css '.notice'
-  end
 end
