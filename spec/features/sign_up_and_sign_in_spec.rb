@@ -53,6 +53,8 @@ feature "User signs up for todoy using email", js: true do
 end
 
 feature "User signs in to todoy using email", js: true do
+  # As a user, I want to be able to sign up using my email,
+  # so that sign up is not connected to my social accounts.
   background do
     click_sign_in
   end
