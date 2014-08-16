@@ -1,4 +1,4 @@
 class SchedulesController < ApplicationController
-  def index
+  def show_current
   end
 end
