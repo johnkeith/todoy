@@ -11,7 +11,20 @@ feature "user views schedule for the day", js: true do
     create_user_and_sign_in
   end
 
-  
+  scenario "sees activities for each hour" do
+    day = Time.now.strftime "%A"
+    visit schedules_show_current_path
+    expect(page).to have_css ".timeframe", count: 12
+    expect(page).to have_css "button", text: "Edit Schedule for #{day}"
+  end
+
+  scenario "receives warning message that no schedule exists" do
+    day = Time.now.strftime "%A"
+    visit schedules_show_current_path
+    expect(page).to have_content 
+      "You have no schedules at the current moment. Try creating a new one!"
+    expect(page).to have_css "button", text: "Create Schedule for #{day}" 
+  end
 
 end
 
