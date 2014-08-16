@@ -11,6 +11,7 @@ feature "user views schedule for the day", js: true do
     create_user_and_sign_in
   end
 
+  
 
 end
 
