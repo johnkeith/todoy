@@ -4,7 +4,7 @@ RSpec.configure do |config|
   config.include SignInHelpers, type: :feature
 end
 
-feature "user views schedule for the day", js: true do
+feature "user views schedule for the current day", js: true do
   # As a user, I want to be able to see my schedule for the current day of the
   # week, so that I can know what I should be doing
   background do
