@@ -1,5 +1,4 @@
 require 'rails_helper'
-require_relative '../support/omniauth_helpers'
 
 RSpec.configure do |config|
   config.include SignUpHelpers, type: :feature
