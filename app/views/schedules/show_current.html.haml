@@ -1,4 +1,20 @@
 .row
-  .col-md-6
-    Test
+  / .col-md-12
+  /   .input-group.input-group-lg
+  /     %span.input-group-addon Schedule for
+  /     %input.form-control{ type: "text", placeholder: "#{current_day}"}
+.row
+  .col-md-12
+    .day-selector
+      .day-selector-addon Schedule for
+      .day-selector-selection.dropdown
+        .dropdown-toggle{ "data-toggle" => "dropdown"}
+          Saturday
+          .pull-right
+            %i.fa.fa-angle-double-down
+        %ul.dropdown-menu.dropdown-menu-days{ role: "menu" }
+          %li
+            %a{ href: "#" } Put days here
+
+          
 

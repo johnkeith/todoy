@@ -13,6 +13,14 @@
       %ul.nav.navbar-nav.navbar-left
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
+          %li.dropdown
+            %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+              Schedule for
+              %strong= current_day
+              %span.caret
+            %ul.dropdown-menu{ role: "menu" }
+              %li
+                %a{ href: "#" } Put days here
           %li
             = link_to "Sign out", destroy_user_session_path, method: :delete
         - else
