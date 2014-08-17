@@ -1,12 +1,12 @@
 module SignUpHelpers
   def click_sign_up
     visit root_path
-    click_link 'Sign Up'
+    click_button 'Sign Up'
   end
 
   def click_sign_in
     visit root_path
-    click_link 'Sign In'
+    click_button 'Sign In'
   end
 
   def success_notification(text)

@@ -4,7 +4,7 @@ module SignInHelpers
     visit root_path
     
     within('.navbar') do
-      click_link "Sign In"
+      click_button "Sign In"
     end
     
     click_link "Using Email"
