@@ -10,6 +10,11 @@
         %ul.dropdown-menu.dropdown-menu-days{ role: "menu" }
           %li
             %a{ href: "#" } Put days here
+  - if @schedule.empty?
+    .col-md-12
+      %button.btn.btn-primary{ type: "button" }
+        Create Schedule for 
+        = current_day
 
           
 
