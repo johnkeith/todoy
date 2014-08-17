@@ -5,4 +5,5 @@ class Schedule < ActiveRecord::Base
 
   belongs_to :user
   has_many :timeframes
+  has_many :tasks, through: :timeframes
 end
