@@ -15,3 +15,4 @@ Timeframes
   has_many tasks
 
 Tasks
+  belongs_to timeframe
