@@ -8,7 +8,6 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .container
-      / = render 'bootstrap/navbar'
-      = render 'custom_devise/alerts'
-      = yield
+    / = render 'bootstrap/navbar'
+    = render 'custom_devise/alerts'
+    = yield

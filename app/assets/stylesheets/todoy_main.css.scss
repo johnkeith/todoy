@@ -19,7 +19,7 @@ body {
   display: table;
   font-size:18px;
   .day-selector-addon {
-    background-color: #F2F1EF;
+    background-color: $gray-lighter;
     border-bottom: 1px solid darken(#F2F1EF, 5%);
     color: #555555;
     display: table-cell;
@@ -27,8 +27,8 @@ body {
     padding:10px 16px;
   }
   .day-selector-selection {
-    background: #3498DB;
-    border-bottom:1px solid darken(#3498DB, 5%);
+    background: $brand-primary;
+    border-bottom:1px solid darken($brand-primary, 5%);
     border-left:0;
     color: white;
     display: table-cell;
@@ -37,7 +37,7 @@ body {
   }
 }
 .dropdown-menu-days {
-  border-color: darken(#3498DB, 5%);
+  border-color: darken($brand-primary, 5%);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-radius: 0;
@@ -45,6 +45,17 @@ body {
   box-shadow:none;
   margin: 0;
   width:100%;
+}
+.center-container {
+  display: table;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  .center-item {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
 }
 
 // bootstrap customizations

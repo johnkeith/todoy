@@ -3,9 +3,7 @@ module SignInHelpers
     user = FactoryGirl.create(:user)
     visit root_path
     
-    within('.navbar') do
-      click_button "Sign In"
-    end
+    click_button "Sign In"
     
     click_link "Using Email"
     fill_in "Email", with: user.email

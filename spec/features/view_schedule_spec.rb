@@ -15,7 +15,6 @@ feature "user views schedule for the current day", js: true do
     day = Time.now.strftime "%A"
     visit schedule_path
     expect(page).to have_css ".timeframe", count: 12
-    expect(page).to have_css "button", text: "Edit Schedule for #{day}"
   end
 
   scenario "receives warning message that no schedule exists" do

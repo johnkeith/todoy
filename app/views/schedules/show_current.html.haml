@@ -1,20 +1,30 @@
-.row
-  .col-md-12
-    .day-selector
-      .day-selector-addon Schedule for
-      .day-selector-selection.dropdown
-        .dropdown-toggle{ "data-toggle" => "dropdown"}
-          Saturday
-          .pull-right
-            %i.fa.fa-angle-double-down
-        %ul.dropdown-menu.dropdown-menu-days{ role: "menu" }
-          %li
-            %a{ href: "#" } Put days here
-  - if @schedule.empty?
-    .col-md-12
+- if @schedule.empty?
+  .center-container
+    .center-item
       %button.btn.btn-primary{ type: "button" }
         Create Schedule for 
         = current_day
+.container
+  .row
+    .col-md-12
+      .day-selector
+        .day-selector-addon Schedule for
+        .day-selector-selection.dropdown
+          .dropdown-toggle{ "data-toggle" => "dropdown"}
+            = current_day
+            .pull-right
+              %i.fa.fa-angle-double-down
+          %ul.dropdown-menu.dropdown-menu-days{ role: "menu" }
+            %li
+              %a{ href: "#" } Put days here
+  .row
+    = @schedule.tasks.each do |task|
+      .col-md-3.col-md-offset-2
+        = task.timeframe
+      .col-md-5
+        = task
+        
+
 
           
 

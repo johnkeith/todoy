@@ -1,22 +1,23 @@
-.jumbotron.jumbotron-home
-  %h1
-    %i.fa.fa-calendar
-    todoy | <small>tuh-doo-ē</small>
-  %p a small app for solving your daily scheduling needs.
-  - if !user_signed_in?
-    .btn-group
-      %button.btn.btn-default.btn-primary.dropdown-toggle{ type: "button", "data-toggle" => "dropdown" }
-        Sign Up
-        %span.caret
-      %ul.dropdown-menu{ role: "menu" }
-        %li
-          = link_to "Using Facebook", user_omniauth_authorize_path(:facebook)
-          = link_to "Using Email", new_user_registration_path
-    .btn-group
-      %button.btn.btn-default.btn-success.dropdown-toggle{ type: "button", "data-toggle" => "dropdown" }
-        Sign In
-        %span.caret
-      %ul.dropdown-menu{ role: "menu" }
-        %li
-          = link_to "Using Facebook", user_omniauth_authorize_path(:facebook)
-          = link_to "Using Email", new_user_session_path
+.container
+  .jumbotron.jumbotron-home
+    %h1
+      %i.fa.fa-calendar
+      todoy | <small>tuh-doo-ē</small>
+    %p a small app for solving your daily scheduling needs.
+    - if !user_signed_in?
+      .btn-group
+        %button.btn.btn-default.btn-primary.dropdown-toggle{ type: "button", "data-toggle" => "dropdown" }
+          Sign Up
+          %span.caret
+        %ul.dropdown-menu{ role: "menu" }
+          %li
+            = link_to "Using Facebook", user_omniauth_authorize_path(:facebook)
+            = link_to "Using Email", new_user_registration_path
+      .btn-group
+        %button.btn.btn-default.btn-success.dropdown-toggle{ type: "button", "data-toggle" => "dropdown" }
+          Sign In
+          %span.caret
+        %ul.dropdown-menu{ role: "menu" }
+          %li
+            = link_to "Using Facebook", user_omniauth_authorize_path(:facebook)
+            = link_to "Using Email", new_user_session_path
