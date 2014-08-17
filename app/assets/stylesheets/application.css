@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap-sass-official/assets/stylesheets/bootstrap.scss
+ *= require fontawesome/scss/font-awesome.scss
  *= require_self
  *= require_tree .
  */
