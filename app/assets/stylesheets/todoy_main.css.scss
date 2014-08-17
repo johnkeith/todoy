@@ -18,26 +18,30 @@ body {
   .day-selector-addon {
     background-color: #F2F1EF;
     border-bottom: 1px solid darken(#F2F1EF, 5%);
-    // border-radius: 4px;
-    // border-bottom-right-radius: 0;
-    // border-top-right-radius: 0;
     color: #555555;
     display: table-cell;
     min-width:140px;
     padding:10px 16px;
   }
   .day-selector-selection {
-    background: #F27935;
-    border-bottom:1px solid darken(#F27935, 5%);
+    background: #3498DB;
+    border-bottom:1px solid darken(#3498DB, 5%);
     border-left:0;
-    // border-radius: 4px;
-    // border-bottom-left-radius: 0;
-    // border-top-left-radius: 0;
     color: white;
     display: table-cell;
     padding:10px 16px;
     width:100%;
   }
+}
+.dropdown-menu-days {
+  border-color: darken(#3498DB, 5%);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow:none;
+  margin: 0;
+  width:100%;
 }
 
 // bootstrap customizations
@@ -50,13 +54,4 @@ body {
   border-bottom-left-radius: 4px;
   .navbar-collapse {
   }
-}
-.dropdown-menu-days {
-  border-color: darken(#F27935, 5%);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow:none;
-  margin: 0;
-  width:100%;
 }
