@@ -17,13 +17,14 @@
           %ul.dropdown-menu.dropdown-menu-days{ role: "menu" }
             %li
               %a{ href: "#" } Put days here
+- if @schedule.empty? == false
   .row
-    = @schedule.tasks.each do |task|
+    = @schedule.timeframes.each do |time|
       .col-md-3.col-md-offset-2
-        = task.timeframe
+        = time.time
       .col-md-5
-        = task
-        
+        = time.task
+
 
 
           
