@@ -1,7 +1,7 @@
 class Timeframe < ActiveRecord::Base
   validates :schedule_id, presence: true
   validates :hour, presence: true
-  validates :hour, inclusion: { in: [1 2 3 4 5 6 7 8 9 10 11 12] }
+  validates :hour, inclusion: { in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] }
   validates :am_pm, presence: true
   validates :am_pm, inclusion: { in: %w(am pm) }
   belongs_to :schedule
