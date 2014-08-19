@@ -1,6 +1,10 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
-
+$main-bg-color: #16A085;
 body {
+  background: $main-bg-color;
+  color: $gray;
+  font-family: "Lato", sans-serif;
+  margin-top:50px;
 }
 
 .dismiss-notice {
@@ -13,19 +17,22 @@ body {
 .schedule-container {
   border-radius: 4px;
   background: white;
-  border-bottom: 3px solid darken(#2D3134, 15%);
+  border-bottom: 2px solid darken($main-bg-color, 15%);
   margin: 0 auto;
   padding-top: 3px;
-  width: 540px;
+  width: 100%;
   h1 {
-    border-bottom: 2px solid #2D3134;
-    padding: 0 20px 20px 20px;
+    border-bottom: 2px solid $main-bg-color;
+    color: darken($main-bg-color, 15%);
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    padding: 0 20px 15px 20px;
   }
   ul {
-    padding: 0px 0px 0 20px;
+    padding: 10px 0px 10px 20px;
     list-style-type: none;
     li + li {
-      border-top: 2px solid #2D3134;
+      border-top: 2px solid $main-bg-color;
       padding: 20px 0px 0px 0px;
     }
     li {
@@ -35,23 +42,24 @@ body {
         width: 100%;
         .hour, .task, .full-time {
           display: table-cell;
+          font-size: $font-size-large;
         }
         .hour {
-          border: 2px solid black;
+          border: 2px solid $main-bg-color;
           border-radius: 50%;
-          font-size: 20px;
+          color: $gray;
           font-weight: bold;
-          height: 22px;
-          padding: 8px;
+          height: 40px;
+          padding:6px;
           text-align: center;
-          width: 22px;
+          width: 40px;
         }
         .task {
-          font-size: 18px;
           padding:0 10px 0 10px;
           text-align: left;
         }
         .full-time {
+          color: $gray-light;
           min-width: 75px;
           padding: 0 20px 0 10px;
           text-align: right;
