@@ -9,4 +9,8 @@ class SchedulesController < ApplicationController
         Try creating a new one!"
     end
   end
+
+  def one_day
+    @schedule = Schedule.find_by(user_id: current_user, day_of_week: params[:day])
+  end
 end

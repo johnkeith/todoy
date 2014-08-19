@@ -10,134 +10,60 @@ body {
   background: 0 0;
   border: 0;
 }
+.schedule-container {
+  border-radius: 4px;
+  background: white;
+  border-bottom: 3px solid darken(#2D3134, 15%);
+  margin: 0 auto;
+  padding-top: 3px;
+  width: 540px;
+  h1 {
+    border-bottom: 2px solid #2D3134;
+    padding: 0 20px 20px 20px;
+  }
+  ul {
+    padding: 0px 0px 0 20px;
+    list-style-type: none;
+    li + li {
+      border-top: 2px solid #2D3134;
+      padding: 20px 0px 0px 0px;
+    }
+    li {
+      padding: 0px 0px 20px 0px;
+      .frame {
+        display: table;
+        width: 100%;
+        .hour, .task, .full-time {
+          display: table-cell;
+        }
+        .hour {
+          border: 2px solid black;
+          border-radius: 50%;
+          font-size: 20px;
+          font-weight: bold;
+          height: 22px;
+          padding: 8px;
+          text-align: center;
+          width: 22px;
+        }
+        .task {
+          font-size: 18px;
+          padding:0 10px 0 10px;
+          text-align: left;
+        }
+        .full-time {
+          min-width: 75px;
+          padding: 0 20px 0 10px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
 
 .schedule-accordian-title {
   background: $gray-lighter;
   font-size: $font-size-large;
-}
-
-
-.schedule-selector-bar {
-  border: 3px solid black;
-  padding: 15px;
-  .dropdown {
-    .dropdown-menu {
-      border-color: darken($brand-primary, 5%);
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      border-radius: 0;
-      border-width: 3px;
-      -webkit-box-shadow: none;
-      box-shadow:none;
-      margin-top: 15px;
-      margin-left: -15px;
-    }
-  }
-}
-
-.schedule-selector {
-  background: $brand-primary;
-  border-bottom:3px solid darken($brand-primary, 5%);
-}
-.schedule-selector-addon {
-  background-color: $gray-lighter;
-  border-bottom: 3px solid darken(#F2F1EF, 5%);
-}
-
-.day-selector {
-  display: table;
-  font-size:18px;
-  .day-selector-addon {
-    background-color: $gray-lighter;
-    border-bottom: 3px solid darken(#F2F1EF, 5%);
-    color: #555555;
-    display: table-cell;
-    min-width: 140px;
-    padding:16px;
-  }
-  .day-selector-selection {
-    background: $brand-primary;
-    border-bottom:3px solid darken($brand-primary, 5%);
-    border-left:0;
-    color: white;
-    display: table-cell;
-    padding:16px;
-    width:100%;
-  }
-}
-.dropdown-menu-days {
-  border-color: darken($brand-primary, 5%);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-radius: 0;
-  border-width: 3px;
-  -webkit-box-shadow: none;
-  box-shadow:none;
-  margin: 0;
-  padding: 16px;
-  width:100%;
-}
-.center-container {
-  display: table;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  .center-item {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-}
-
-.time-task-card {
-  background: $gray-lighter;
-  border-bottom:1px solid darken($gray-lighter, 5%);
-  overflow: hidden;
-  .time-on-card {
-    font-size: $font-size-base * 3.5;
-    font-weight: bold;
-    position: relative;
-    top:0;
-  }
-  .task-on-card {
-    position: relative;
-    left: 20px;
-  }
-  &+& {
-    margin-top:15px;
-  }
-}
-.card {
-  padding: 15px;
-  .time {
-    border-right: 3px solid #333;
-    display: inline-block;
-    font-size: $font-size-base * 2;
-    font-weight: bold;
-    padding-right: 10px;
-  }
-  .task {
-    display: inline-block;
-    font-size: $font-size-base * 2;
-    padding-left: 10px;
-    input {
-      border: 0;
-      border-bottom: 3px solid black;
-      padding:5px;
-      outline: 0;
-    }
-  }
-}
-
-.card-02 {
-  .time-02 {
-    background: $gray-lighter;
-    border-bottom:3px solid darken($gray-lighter, 5%);
-    padding: 10px;
-  }
-  .task-02 {
-    padding: 10px;
-  }
 }
 
 // bootstrap customizations

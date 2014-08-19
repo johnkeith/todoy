@@ -7,18 +7,21 @@
 .container
   .row
     .col-md-6.col-md-offset-3
-      .panel-group#schedule-accordian
-        .panel.panel-default
-          %a{ "data-toggle" => "collapse", "data-parent" => "#schedule-accordian", href: "#schedule-accordian-collapse" }
-            .panel-heading.schedule-accordian-title
-              .panel-title
-                / %a{ "data-toggle" => "collapse", "data-parent" => "#schedule-accordian", href: "#schedule-accordian-collapse" }
-                = "Schedule for #{current_day}"
-                .pull-right
-                  %i.fa.fa-angle-double-down
-          .panel-collapse.collapse#schedule-accordian-collapse
-            .panel-body
-              %a{ href: "#"} Future site of something great
+      
+  / .row
+  /   .col-md-6.col-md-offset-3
+  /     .panel-group#schedule-accordian
+  /       .panel.panel-default
+  /         %a{ "data-toggle" => "collapse", "data-parent" => "#schedule-accordian", href: "#schedule-accordian-collapse" }
+  /           .panel-heading.schedule-accordian-title
+  /             .panel-title
+  /               / %a{ "data-toggle" => "collapse", "data-parent" => "#schedule-accordian", href: "#schedule-accordian-collapse" }
+  /               = "Schedule for #{current_day}"
+  /               .pull-right
+  /                 %i.fa.fa-angle-double-down
+  /         .panel-collapse.collapse#schedule-accordian-collapse
+  /           .panel-body
+  /             %a{ href: "#"} Future site of something great
   / .row
   /   .col-md-6.col-md-offset-3
   /     .schedule-selector-bar
