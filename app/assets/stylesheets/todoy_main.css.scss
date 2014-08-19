@@ -1,10 +1,10 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
-$main-bg-color: #16A085;
+$main-bg-color: #2ABB9B;
 body {
   background: $main-bg-color;
   color: $gray;
   font-family: "Lato", sans-serif;
-  margin-top:50px;
+  margin:50px 0 50px 0;
 }
 
 .dismiss-notice {
@@ -33,7 +33,7 @@ body {
     list-style-type: none;
     li + li {
       border-top: 2px solid $main-bg-color;
-      padding: 20px 0px 0px 0px;
+      padding: 20px 0px 20px 0px;
     }
     li {
       padding: 0px 0px 20px 0px;
@@ -65,6 +65,9 @@ body {
           text-align: right;
         }
       }
+    }
+    li:last-child {
+      padding: 20px 0px 0px 0px;
     }
   }
 }
