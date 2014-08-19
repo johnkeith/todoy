@@ -11,14 +11,15 @@ feature "user views schedule for the current day", js: true do
 
   scenario "sees activities for each hour" do
     user = FactoryGirl.create(:user)
-    build_one_day_schedule(user, "sunday")
+    build_one_day_schedule(user)
     sign_in(user)
     expect(page).to have_css "li", count: 13
   end
 
   scenario "receives warning message that no schedule exists" do
     day = Time.now.strftime "%A"
-    visit schedule_path
+    user = FactoryGirl.create(:user)
+    sign_in(user)
     expect(page).to have_content 
       "You have no schedules at the current moment. Try creating a new one!"
     expect(page).to have_css "button", text: "Create Schedule for #{day}" 

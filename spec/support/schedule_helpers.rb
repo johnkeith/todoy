@@ -5,7 +5,8 @@ module ScheduleHelpers
     create_tasks_each_timeframe
   end
 
-  def build_one_day_schedule(user, day)
+  def build_one_day_schedule(user)
+    day = Time.now.strftime "%A"
     Schedule.create(user_id: user.id, day_of_week: day)
     create_timeframes_each_hour
     create_tasks_each_timeframe
