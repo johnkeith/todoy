@@ -1,6 +1,5 @@
 module SignInHelpers
-  def create_user_and_sign_in
-    user = FactoryGirl.create(:user)
+  def sign_in(user)
     visit root_path
     
     click_button "Sign In"

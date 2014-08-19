@@ -2,19 +2,18 @@ require 'rails_helper'
 
 RSpec.configure do |config|
   config.include SignInHelpers, type: :feature
+  config.include ScheduleHelpers, type: :feature
 end
 
 feature "user views schedule for the current day", js: true do
   # As a user, I want to be able to see my schedule for the current day of the
   # week, so that I can know what I should be doing
-  background do
-    create_user_and_sign_in
-  end
 
   scenario "sees activities for each hour" do
-    day = Time.now.strftime "%A"
-    visit schedule_path
-    expect(page).to have_css ".timeframe", count: 12
+    user = FactoryGirl.create(:user)
+    build_one_day_schedule(user, "sunday")
+    sign_in(user)
+    expect(page).to have_css "li", count: 13
   end
 
   scenario "receives warning message that no schedule exists" do
