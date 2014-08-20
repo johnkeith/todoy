@@ -36,3 +36,6 @@ feature "user can edit schedule on the fly", js: true do
   # so that I can deal with the changing needs of the day
   # PERHAPS USE JQUERY UI DRAGGABLE + Angular for adjusting locations
 end
+
+feature "user is redirected to current day schedule from /schedule", js: true do
+end
