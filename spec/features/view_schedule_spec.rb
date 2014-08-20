@@ -27,6 +27,12 @@ feature "user views schedule for the current day", js: true do
 end
 
 feature "user sees current task highlighted", js: true do
-  # As a suer, I want my current task to be highlighted, 
+  # As a user, I want my current task to be highlighted, 
   # so that I can easily tell what I should do next
+end
+
+feature "user can edit schedule on the fly", js: true do
+  # As a user, I want to be able to edit my schedule quickly, 
+  # so that I can deal with the changing needs of the day
+  # PERHAPS USE JQUERY UI DRAGGABLE + Angular for adjusting locations
 end
