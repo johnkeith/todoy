@@ -24,7 +24,6 @@ feature "user views schedule for the current day", js: true do
       "You have no schedules at the current moment. Try creating a new one!"
     expect(page).to have_css "button", text: "Create Schedule for #{day}" 
   end
-
 end
 
 feature "user sees current task highlighted", js: true do

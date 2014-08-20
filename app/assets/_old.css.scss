@@ -58,17 +58,7 @@
   padding: 16px;
   width:100%;
 }
-.center-container {
-  display: table;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  .center-item {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-}
+
 
 .time-task-card {
   background: $gray-lighter;

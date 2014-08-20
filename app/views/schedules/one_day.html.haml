@@ -1,10 +1,11 @@
 - hours = [7,8,9,10,11,12,1,2,3,4,5,6,7]
-- if @schedule.nil?
+- days_of_week = %w(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)
+- if @schedule.nil? && days_of_week.include?(params["day"])
   .center-container
     .center-item
       %button.btn.btn-primary{ type: "button" }
         Create Schedule for 
-        = current_day
+        = params["day"]
 .container
   .row
     .col-md-6.col-md-offset-3

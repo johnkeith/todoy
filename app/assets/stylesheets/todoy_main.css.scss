@@ -4,7 +4,7 @@ body {
   background: $main-bg-color;
   color: $gray;
   font-family: "Lato", sans-serif;
-  margin:50px 0 50px 0;
+  margin:0px 0 50px 0;
 }
 
 .dismiss-notice {
@@ -18,7 +18,7 @@ body {
   border-radius: 4px;
   background: white;
   border-bottom: 2px solid darken($main-bg-color, 15%);
-  margin: 0 auto;
+  margin: 20px auto;
   padding-top: 3px;
   width: 100%;
   h1 {
@@ -29,14 +29,14 @@ body {
     padding: 0 20px 15px 20px;
   }
   ul {
-    padding: 10px 0px 10px 20px;
+    padding: 10px 0px 10px 0px;
     list-style-type: none;
     li + li {
       border-top: 2px solid $main-bg-color;
-      padding: 20px 0px 20px 0px;
+      padding: 20px 0px 20px 20px;
     }
     li {
-      padding: 0px 0px 20px 0px;
+      padding: 0px 0px 20px 20px;
       .frame {
         display: table;
         width: 100%;
@@ -67,7 +67,7 @@ body {
       }
     }
     li:last-child {
-      padding: 20px 0px 0px 0px;
+      padding: 20px 0px 0px 20px;
     }
   }
 }
@@ -75,6 +75,20 @@ body {
 .schedule-accordian-title {
   background: $gray-lighter;
   font-size: $font-size-large;
+}
+
+.center-container {
+  display: table;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top:0;
+  z-index: -1000;
+  .center-item {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
 }
 
 // bootstrap customizations
