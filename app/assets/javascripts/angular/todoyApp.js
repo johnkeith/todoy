@@ -2,7 +2,7 @@
   var todoyApp = angular.module('todoyApp', [
     'templates',
     'ngRoute',
-    'controllers',
+    'todoyControllers',
     'ngResource',
     ]);
 
@@ -10,7 +10,7 @@
     $routeProvider.
       when('/schedule', {
         templateUrl: "schedule.html",
-        controller: 'SchedulesController'
+        controller: 'schedulesController'
       });
   }]);
 })();
