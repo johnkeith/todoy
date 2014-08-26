@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require angular/angular
 //= require angular-route/angular-route
+//= require angular-resource/angular-resource
 //= require angular-rails-templates
 //= require bootstrap-sass-official/assets/javascripts/bootstrap.js
-//= require_tree ./angular
+//= require_tree ./controllers
+//= require_tree ./templates
+//= require todoyApp
 //= require global

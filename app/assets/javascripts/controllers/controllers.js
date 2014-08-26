@@ -1,7 +1,7 @@
 (function(){
   var controllers = angular.module('todoyControllers', []);
 
-  controllers.controller('schedulesController', ['$scope', '$resource',
+  controllers.controller('SchedulesController', ['$scope', '$resource',
     function($scope, $resource){
       var schedule = $resource("/schedule");
 

@@ -2,8 +2,8 @@ class SchedulesController < ApplicationController
   before_action :authenticate_user!
 
   def show_current_day
-    day = Time.now.strftime "%A"
-    redirect_to schedule_for_day_path(day)
+    # day = Time.now.strftime "%A"
+    # redirect_to schedule_for_day_path(day)
   end
 
   def show_day
