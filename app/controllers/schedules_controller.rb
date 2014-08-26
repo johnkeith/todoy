@@ -8,7 +8,7 @@ class SchedulesController < ApplicationController
 
   def show_day
     @schedule = Schedule.find_by(user_id: current_user, day_of_week: params[:day])
-
+    
     if @schedule.nil?
       flash.now[:alert] = "You have no schedules at the current moment.
         Try creating a new one!"
