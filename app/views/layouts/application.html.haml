@@ -1,5 +1,5 @@
 !!!
-%html
+%html{ "ng-app" => "todoyApp" }
   %head
     %meta{charset: "utf-8"}
     %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no", name: "viewport"}
@@ -11,5 +11,6 @@
     = csrf_meta_tags
   %body
     / = render 'bootstrap/navbar'
-    = render 'custom_devise/alerts'
-    = yield
+    / = render 'custom_devise/alerts'
+    .main{ "ng-view" => "" }
+      = yield
